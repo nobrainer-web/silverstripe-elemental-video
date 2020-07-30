@@ -9,9 +9,9 @@
     <div class="col-md-12">
         <div class="embed-responsive embed-responsive-{$MediaAspectRatio}">
             <video controls muted preload="automatic"<% if $PosterImage %> poster="$PosterImage.URL"<% end_if %>>
-                <source src="$VideoFileMP4.Link" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\'>
-                <% if $VideoFileWEBM %><source src="$VideoFileWEBM.Link" type=\'video/webm; codecs="vp8, vorbis"\'><% end_if %>
-                <% if $VideoFileOGV %><source src="$VideoFileOGV.Link" type=\'video/ogg; codecs="theora, vorbis"\'><% end_if %>
+                <source src="$VideoFileMP4.Link" type="video/mp4;">
+                <% if $VideoFileWEBM %><source src="$VideoFileWEBM.Link" type="video/webm"><% end_if %>
+                <% if $VideoFileOGV %><source src="$VideoFileOGV.Link" type="video/ogg"><% end_if %>
             </video>
         </div>
         <% if $MediaCredits %>
