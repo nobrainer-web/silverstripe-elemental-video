@@ -25,6 +25,9 @@ class ElementVideo extends BaseElement
     private static $db = [
         'Content' => 'HTMLText',
         'MediaAspectRatio' => "Enum('21by9,16by9,4by3,1by1','16by9')",
+        'Autoplay' => "Enum('Off,On','Off')",
+        'Muted' => "Enum('Off,On','On')",
+        'Loop' => "Enum('Off,On','Off')",
         'MediaCredits' => 'HTMLText',
     ];
 
@@ -39,7 +42,10 @@ class ElementVideo extends BaseElement
     ];
 
     private static $defaults = [
-        'MediaAspectRatio' => '16by9'
+        'MediaAspectRatio' => '16by9',
+        'Autoplay' => 'Off',
+        'Muted' => 'On',
+        'Loop' => 'Off',
     ];
 
     /**
