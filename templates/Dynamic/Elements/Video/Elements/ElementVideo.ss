@@ -8,7 +8,7 @@
 <% if $VideoFileMP4 %>
     <div class="col-md-12">
         <div class="embed-responsive embed-responsive-{$MediaAspectRatio}">
-            <video controls muted preload="automatic"<% if $PosterImage %> poster="$PosterImage.URL"<% end_if %>>
+        <video controls playsinline<% if $Muted == On %> muted<% end_if %><% if $Autoplay == On %> autoplay<% end_if %><% if $Loop == On %> loop<% end_if %> preload="automatic"<% if $PosterImage %> poster="$PosterImage.URL"<% end_if %>>
                 <source src="$VideoFileMP4.Link" type="video/mp4;">
                 <% if $VideoFileWEBM %><source src="$VideoFileWEBM.Link" type="video/webm"><% end_if %>
                 <% if $VideoFileOGV %><source src="$VideoFileOGV.Link" type="video/ogg"><% end_if %>
