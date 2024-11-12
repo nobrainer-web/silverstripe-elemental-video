@@ -76,7 +76,7 @@ class ElementVideo extends BaseElement
         $this->beforeUpdateCMSFields(function (FieldList $fields) {
 
             // Video Tab
-            $fields->insertAfter(new Tab('VideoTab', _t(__CLASS__ . '.VideoTab','Video') ), 'Main');
+            $fields->insertAfter('Main', new Tab('VideoTab', _t(__CLASS__ . '.VideoTab','Video') ));
 
             // Video internal / self-hosted Video: MP4
             $fields->removeByName('VideoFileMP4');
